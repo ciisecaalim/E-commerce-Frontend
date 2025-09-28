@@ -17,8 +17,8 @@ function CustomerLogin() {
     // Choose endpoint based on active role
     const url =
       active === "customer"
-        ? "http://localhost:3000/login/customer"
-        : "http://localhost:3000/login/admin";
+        ? "https://e-commerce-backend-nnmn.onrender.com/login/customer"
+        : "https://e-commerce-backend-nnmn.onrender.com/login/admin";
 
     const payload = { email: gmail, password };
 
