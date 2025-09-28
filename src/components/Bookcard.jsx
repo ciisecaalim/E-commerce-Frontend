@@ -20,7 +20,7 @@ function BookCard() {
   // Fetch products
   useEffect(() => {
     axios
-      .post("http://localhost:3000/read/product", { category })
+      .post("https://e-commerce-backend-nnmn.onrender.com/read/product", { category })
       .then((res) => setData(res.data))
       .catch((err) => console.error("Error fetching product:", err));
   }, [category]);
