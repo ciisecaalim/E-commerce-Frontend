@@ -37,7 +37,7 @@ const handleOrder = () => {
     return;
   }
 
-  axios.post("http://localhost:3000/create/order", {
+  axios.post("https://e-commerce-backend-nnmn.onrender.com/create/order", {
     customer: customerOrder, // sax loo dirayo magaca
     products: product.map(item => ({
       productId: item._id,
@@ -93,7 +93,7 @@ const handleOrder = () => {
                 <div key={index} className="flex flex-col md:flex-row justify-between items-center py-4 border-b">
                   {/* Product Details */}
                   <div className="flex items-center gap-4 w-full md:w-40">
-                    <img src={`http://localhost:3000/allImg/${item.prImg}`} alt="" className="w-20 h-20 object-contain" />
+                    <img src={`https://e-commerce-backend-nnmn.onrender.com/allImg/${item.prImg}`} alt="" className="w-20 h-20 object-contain" />
                     <div>
                       <h4 className="font-medium text-lg">{item.name}</h4>
                       <p className="text-sm text-purple-600">{item.category}</p>
