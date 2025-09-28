@@ -15,7 +15,7 @@ function UpdateBookForm() {
     const navigate = useNavigate();
 
     const handleSingleData = () => {
-        axios.get(`http://localhost:3000/read/singleproduct/${params.id}`).then((res) => {
+        axios.get(`https://e-commerce-backend-nnmn.onrender.com/read/singleproduct/${params.id}`).then((res) => {
             setName(res.data.name);
             setQuantity(res.data.quantity);
             setPrice(res.data.price);
@@ -35,7 +35,7 @@ function UpdateBookForm() {
             formData.append("img", img);
         }
 
-        axios.put(`http://localhost:3000/update/product/${params.id}`, formData)
+        axios.put(`https://e-commerce-backend-nnmn.onrender.com/update/product/${params.id}`, formData)
             .then(() => {
                 alert("Successfully updated");
                 navigate("/dash/books");
@@ -108,7 +108,7 @@ function UpdateBookForm() {
                     className="w-full border border-gray-300 rounded p-2"
                     onChange={(e) => setImage(e.target.files[0])}
                 />
-                {img && <img className="w-60" src={`http://localhost:3000/allImg/${img}`} alt="" />}
+                {img && <img className="w-60" src={`https://e-commerce-backend-nnmn.onrender.com/allImg/${img}`} alt="" />}
             </div>
             <button
                 type="submit"
