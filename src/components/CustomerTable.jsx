@@ -6,12 +6,12 @@ import { toast } from "react-toastify";
 function CustomerTable() {
   const [customers, setCustomers] = useState([]);
   function readAll () {
-      axios.get("http://localhost:3000/read/customer")
+      axios.get("https://e-commerce-backend-nnmn.onrender.com/read/customer")
       .then((res) => setCustomers(res.data))
   }
 
   function deleteCustomers (id) {
-    axios.delete(`http://localhost:5000/delete/customer/${id}`).then(() =>{
+    axios.delete(`https://e-commerce-backend-nnmn.onrender.com/delete/customer/${id}`).then(() =>{
       toast.success("deleted successfully")
       readAll()
     })
