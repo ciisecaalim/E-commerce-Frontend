@@ -10,7 +10,7 @@ function LoginDash(){
 
     const handleLogin =(e) => {
         e.preventDefault()
-        axios.post("http://localhost:3000/login/user", {
+        axios.post("https://e-commerce-backend-nnmn.onrender.com/login/user", {
             "userName": userName,
             "password" :password
         }).then((res) => {
