@@ -21,7 +21,7 @@ function BookTable() {
   };
 
   const deleteProduct = (id) => {
-    axios.delete(`http://localhost:3000/delete/product/${id}`)
+    axios.delete(`https://e-commerce-backend-nnmn.onrender.com/delete/product/${id}`)
       .then(() => {
         alert("Deleted successfully");
         showData();
@@ -34,7 +34,7 @@ function BookTable() {
   const searchData = (event) => {
     const key = event.target.value;
     if (key) {
-      axios.post(`http://localhost:3000/search/book/${key}`)
+      axios.post(`https://e-commerce-backend-nnmn.onrender.com/search/book/${key}`)
         .then((res) => setBooks(res.data))
         .catch((err) => console.error("Error searching books:", err));
     } else {
@@ -76,7 +76,7 @@ function BookTable() {
               <tr key={book._id} className="text-center">
                 <td className="border p-2">{index + 1}</td>
                 <td className="border p-2">
-                  <img className="w-20" src={`http://localhost:3000/allImg/${book.prImg}`} alt={book.name} />
+                  <img className="w-20" src={`https://e-commerce-backend-nnmn.onrender.com/allImg/${book.prImg}`} alt={book.name} />
                 </td>
                 <td className="border p-2">{book.name}</td>
                 <td className="border p-2">{book.quantity}</td>
