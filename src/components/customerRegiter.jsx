@@ -17,7 +17,7 @@ function CustomerRegistrationForm() {
 
   function handleInsert (e) {
     e.preventDefault()
-    const url = active === "customer" ? "https://e-commerce-backend-nnmn.onrender.com/create/customer" : "https://e-commerce-backend-nnmn.onrender.com/create/admin"
+    const url = active === "customer" ? "https://e-commerce-backend-zymt.onrender.com/create/customer" : "https://e-commerce-backend-zymt.onrender.com/create/admin"
     const pyload = active === "customer" ? { name:customerName,     email:gmail,         phone:phone,         address:address,   password:password} : {name: customerName,    email:gmail, password:password}
     axios.post(url, pyload)
   .then((res) => {
